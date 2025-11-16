@@ -19,7 +19,6 @@ export default function RoomDetailPage2() {
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM.jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.09 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM.jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (2).jpeg',
@@ -29,7 +28,6 @@ export default function RoomDetailPage2() {
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM.jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.03 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.05 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.05 PM.jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
@@ -65,14 +63,14 @@ export default function RoomDetailPage2() {
     {
       name: 'Stefan',
       date: '5 Juli 2024',
-      rating: 4.5,
+      rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=12',
       comment: 'Nice place to stay for days. Extremely friendly owner, correct description. Many restaurants, travel agents, ATMs and a supermarket are just in a walking distance.Nearly complete kitchen equipment provided including fridge, also free coffee and tea. Nice beds and bathrooms. Best place on our trip.'
     },
     {
       name: 'Anna',
       date: '20 Februari 2024',
-      rating: 4.5,
+      rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=43',
       comment: 'A very cozy and beautiful house, downstairs there is a spacious dining room and kitchen, on the 2nd floor there are 2 cozy bedrooms with air conditioning and shower. The kitchen has all the necessary utensils, appliances and a free cooler with clean water on both floors. The owner is very kind, helped us in all matters, quickly resolved all issues around the house and promptly advised us on sights. The house is perfect for both a family and a group of friends. Very convenient location in the city center, there are many shops and a variety of cafes with delicious food nearby. We are very grateful to the owner of the house for his care and cozy home.'
     }
@@ -84,6 +82,14 @@ export default function RoomDetailPage2() {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const message = `Hello, I would like to book the ${roomData.name} Name : ${name}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}\nRooms: ${rooms}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/6281128712370?text=${encodedMessage}`;
+    window.location.href = whatsappUrl;
   };
 
   const renderStars = (rating) => {
@@ -224,7 +230,7 @@ export default function RoomDetailPage2() {
                 <h3 className="text-2xl md:text-3xl font-serif text-gray-800 mb-6">Add Review</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <input 
-                    type="text"
+                      type="text"
                     placeholder="Name*"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -270,15 +276,23 @@ export default function RoomDetailPage2() {
             <div className="lg:col-span-1 order-2">
               <div className="bg-white border border-gray-200 p-6 md:p-8 lg:sticky lg:top-8">
                 <h3 className="text-xl md:text-2xl font-serif text-gray-800 mb-6">Your Reservation</h3>
-                
-                <div className="space-y-4">
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                   <div>
+                    <label className="block text-sm text-gray-600 mb-2">Name :</label>
+                    <input 
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
+                    />
+                  </div>
                   <div>
                     <label className="block text-sm text-gray-600 mb-2">Check In:</label>
                     <input 
-                      type="text"
+                      type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
-                      placeholder="24 / April / 2020"
                       className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                     />
                   </div>
@@ -286,10 +300,9 @@ export default function RoomDetailPage2() {
                   <div>
                     <label className="block text-sm text-gray-600 mb-2">Check Out:</label>
                     <input 
-                      type="text"
+                      type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
-                      placeholder="30 / April / 2020"
                       className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                     />
                   </div>
@@ -327,7 +340,7 @@ export default function RoomDetailPage2() {
                   <button className="w-full border border-gray-300 text-gray-700 py-3 hover:bg-gray-50 transition-colors uppercase text-sm font-semibold tracking-wider">
                     Check Availability
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>

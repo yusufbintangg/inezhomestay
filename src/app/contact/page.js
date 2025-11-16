@@ -26,7 +26,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-4xl font-serif text-gray-800 mb-6">Contact Info</h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                INEZ Homestay is located in the heart of Yogyakarta, offering comfortable and affordable accommodation. Feel free to reach out for bookings or inquiries. We're here to make your stay memorable.
+                INEZ Homestay is located in the heart of Yogyakarta, offering comfortable and affordable accommodation. Feel free to reach out for bookings or inquiries. We&apos;re here to make your stay memorable.
               </p>
 
               <div className="space-y-4 mb-8">

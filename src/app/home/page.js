@@ -183,7 +183,7 @@ export default function Homepage() {
               <span key={i} className="text-amber-400 text-xl">★</span>
             ))}
           </div>
-          <p className="text-gray-800 font-medium">- Alexander Vasquez</p>
+          <p className="text-gray-800 font-medium">-Moniek, Netherlands</p>
         </div>
       </section>
     </div>

@@ -33,7 +33,7 @@ export default function RoomDetailPage() {
     capacity: 'Max person 2',
     bed: 'Queen Bed',
     totalSize: '40 m²',
-    rating: 4.5,
+    rating: 5,
     facilities: [
       'Entire holiday home',
       '40 m²',
@@ -51,7 +51,7 @@ export default function RoomDetailPage() {
     {
       name: 'Stefan',
       date: '5 Juli 2024',
-      rating: 4.5,
+      rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=12',
       comment: 'Nice place to stay for days. Extremely friendly owner, correct description. Many restaurants, travel agents, ATMs and a supermarket are just in a walking distance.Nearly complete kitchen equipment provided including fridge, also free coffee and tea. Nice beds and bathrooms. Best place on our trip.'
     },
@@ -70,6 +70,14 @@ export default function RoomDetailPage() {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const message = `Hello, I would like to book the ${roomData.name} Name : ${name}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}\nRooms: ${rooms}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/6281128712370?text=${encodedMessage}`;
+    window.location.href = whatsappUrl;
   };
 
   const renderStars = (rating) => {
@@ -209,7 +217,7 @@ export default function RoomDetailPage() {
               <div>
                 <h3 className="text-2xl md:text-3xl font-serif text-gray-800 mb-6">Add Review</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <input 
+                  <input
                     type="text"
                     placeholder="Name*"
                     value={name}
@@ -252,19 +260,26 @@ export default function RoomDetailPage() {
               </div>
             </div>
 
-            {/* Right Column - Reservation Form */}
+               {/* Right Column - Reservation Form */}
             <div className="lg:col-span-1 order-2">
               <div className="bg-white border border-gray-200 p-6 md:p-8 lg:sticky lg:top-8">
                 <h3 className="text-xl md:text-2xl font-serif text-gray-800 mb-6">Your Reservation</h3>
-                
-                <div className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                   <div>
+                    <label className="block text-sm text-gray-600 mb-2">Name :</label>
+                    <input 
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
+                    />
+                  </div>
                   <div>
                     <label className="block text-sm text-gray-600 mb-2">Check In:</label>
                     <input 
-                      type="text"
+                      type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
-                      placeholder="24 / April / 2020"
                       className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                     />
                   </div>
@@ -272,10 +287,9 @@ export default function RoomDetailPage() {
                   <div>
                     <label className="block text-sm text-gray-600 mb-2">Check Out:</label>
                     <input 
-                      type="text"
+                      type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
-                      placeholder="30 / April / 2020"
                       className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                     />
                   </div>
@@ -302,7 +316,6 @@ export default function RoomDetailPage() {
                       className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500 appearance-none bg-white"
                     >
                       <option>1 ROOM</option>
-                      <option>2 ROOMS</option>
                     </select>
                   </div>
 
@@ -313,7 +326,7 @@ export default function RoomDetailPage() {
                   <button className="w-full border border-gray-300 text-gray-700 py-3 hover:bg-gray-50 transition-colors uppercase text-sm font-semibold tracking-wider">
                     Check Availability
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>

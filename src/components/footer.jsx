@@ -89,7 +89,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="text-sm text-gray-400">
-              Copyright ©2025 All rights reserved | INEZ Homestay Yogyakarta
+              © Copyright 2025 INEZ Homestay Yogyakarta. All Rights Reserved | Powered By <strong> <a href="https://stardevcreative.vercel.app/">StarDev Creative</a></strong>
             </div>
           </div>
         </div>
