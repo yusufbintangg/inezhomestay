@@ -65,7 +65,7 @@ export default function Homepage() {
 
           {/* Booking Form */}
           <div className="absolute right-8 top-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-2xl w-96 hidden lg:block">
-            <h3 className="text-2xl font-serif mb-6 text-gray-800">Booking Your Hotel</h3>
+            <h3 className="text-2xl font-serif mb-6 text-gray-800">Booking Your Homestay</h3>
 
             <div className="space-y-4">
               <div>

@@ -228,7 +228,7 @@ export default function RoomDetailPage2() {
               {/* Add Review Form */}
               <div>
                 <h3 className="text-2xl md:text-3xl font-serif text-gray-800 mb-6">Add Review</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="grid text-black grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <input 
                       type="text"
                     placeholder="Name*"
@@ -263,7 +263,7 @@ export default function RoomDetailPage2() {
                   value={review}
                   onChange={(e) => setReview(e.target.value)}
                   rows="6"
-                  className="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500 mb-4"
+                  className="w-full text-gray-600 border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500 mb-4"
                 ></textarea>
 
                 <button className="bg-amber-500 text-white px-8 py-3 hover:bg-amber-600 transition-colors uppercase text-sm font-semibold tracking-wider w-full md:w-auto">
