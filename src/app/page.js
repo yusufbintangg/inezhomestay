@@ -156,7 +156,7 @@ export default function Homepage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-gray-50 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
+      <section className="py-20 px-4 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif mb-16 text-gray-800">Discover Our Facilities</h2>
           <div className="grid md:grid-cols-3 gap-12">
