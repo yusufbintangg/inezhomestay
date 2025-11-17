@@ -171,7 +171,7 @@ export default function Homepage() {
         </div>
       </section>
       {/* Testimonial Section */}
-      <section className="py-20 px-4 bg-gray-50 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
+      <section className="py-20 px-4 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Testimonials</p>
           <h2 className="text-4xl md:text-5xl font-serif mb-12 text-gray-800">What Customers Say?</h2>
