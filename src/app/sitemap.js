@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.inezhomestay.com'; // PAKAI www (harus!)
+  const baseUrl = 'https://inezhomestay.com'; // PAKAI www (harus!)
 
   // Daftar halaman statis
   const staticPages = [
@@ -46,7 +46,7 @@ export default function sitemap() {
       priority: 0.8,
     },
   ];
-  
+
   // Jika ada halaman dinamis, tambahkan di sini
   // Contoh: untuk halaman produk atau artikel dari database
   // const dynamicPages = products.map((product) => ({
