@@ -18,7 +18,7 @@ export default function Header() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'House', href: '/rooms' },
-    { name: 'About Us', href: '/aboutus' },
+    { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -33,7 +33,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/home" className="flex items-center space-x-2 group">
+          <a href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               <div className="duration-300 group-hover:scale-105">
                 <img src="/logo/inezhomestaylogo.ico" alt="INEZ Homestay Logo" className="h-12 w-20" />

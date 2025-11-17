@@ -20,8 +20,91 @@ const cabin = Cabin({
 });
 
 export const metadata = {
-  title: "INEZ Homestay - Feels Like Home",
-  description: "Feels Like Home",
+  metadataBase: new URL('https://inezhomestay.com'),
+  title: {
+    default: "INEZ Homestay - Feels Like Home",
+    template: "%s | INEZ Homestay"
+  },
+  description: "Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome in the heart of Indonesia.",
+  keywords: ["homestay", "Indonesia", "accommodation", "studio room", "residential house", "vacation rental", "cultural experience", "local hospitality"],
+  authors: [{ name: "INEZ Homestay Team" }],
+  creator: "INEZ Homestay",
+  publisher: "INEZ Homestay",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  category: "accommodation",
+  classification: "homestay services",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://inezhomestay.com',
+    siteName: 'INEZ Homestay',
+    title: 'INEZ Homestay - Feels Like Home',
+    description: 'Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome.',
+    images: [
+      {
+        url: 'https://inezhomestay.com/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+        width: 1200,
+        height: 630,
+        alt: 'INEZ Homestay Logo',
+      },
+      {
+        url: 'https://inezhomestay.com/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+        width: 1200,
+        height: 630,
+        alt: 'INEZ Homestay Hero Image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@inezhomestay',
+    creator: '@inezhomestay',
+    title: 'INEZ Homestay - Feels Like Home',
+    description: 'Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome.',
+    images: ['/logo/Logo INEZ Homestay - ARIEF DARU.png'],
+  },
+  verification: {
+    bing: 'your-bing-site-verification-code', // Ganti dengan Bing verification code
+    yandex: 'your-yandex-verification-code', // Ganti dengan Yandex verification code
+    baidu: 'your-baidu-verification-code', // Ganti dengan Baidu verification code
+  },
+  alternates: {
+    canonical: 'https://inezhomestay.com',
+    languages: {
+      'en-US': 'https://inezhomestay.com',
+      'id-ID': 'https://inezhomestay.com/id', // Jika ada versi bahasa Indonesia
+    },
+  },
+  manifest: '/manifest.json', // Jika ada PWA manifest
+  icons: {
+    icon: '/logo/inezhomestaylogo.ico',
+    shortcut: '/logo/inezhomestaylogo.ico',
+    apple: '/logo/inezhomestaylogo.ico',
+  },
+  other: {
+    'theme-color': '#ffffff',
+    'color-scheme': 'light',
+    'viewport': 'width=device-width, initial-scale=1',
+    'msapplication-TileColor': '#ffffff',
+    'msapplication-config': '/browserconfig.xml', // Jika ada
+  },
 };
 
 export default function RootLayout({ children }) {

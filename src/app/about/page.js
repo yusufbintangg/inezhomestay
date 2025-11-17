@@ -25,13 +25,13 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen mx-4 md:mx-8 lg:mx-16 xl:mx-32">
       {/* Header Section */}
       <section className="relative bg-white py-35">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif mb-4 text-gray-800">About Us</h1>
           <p className="text-gray-500">
-            <a href="/home" className="hover:text-gray-800 transition-colors">Home</a>
+            <a href="/" className="hover:text-gray-800 transition-colors">Home</a>
             <span className="mx-3">›</span>
             <span className="text-gray-800">About Us</span>
           </p>

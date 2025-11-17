@@ -107,17 +107,17 @@ export default function RoomDetailPage2() {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen mx-4 md:mx-8 lg:mx-16 xl:mx-32">
       {/* Header Section */}
       <section className="relative bg-white py-35">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif mb-4 text-gray-800">Our Rooms</h1>
           <p className="text-gray-500">
-            <a href="/home" className="hover:text-gray-800 transition-colors">Home</a>
+            <a href="/" className="hover:text-gray-800 transition-colors">Home</a>
             <span className="mx-3">›</span>
             <a href="/rooms" className="hover:text-gray-800 transition-colors">House</a>
             <span className="mx-3">›</span>
-            <a href="/rooms/residential" className="text-black hover:text-gray-800 transition-colors">Residential House with 2 Bedrooms</a>
+            <a href="/rooms/residential-house-2-bedroom" className="text-black hover:text-gray-800 transition-colors">Residential House with 2 Bedrooms</a>
           </p>
         </div>
       </section>

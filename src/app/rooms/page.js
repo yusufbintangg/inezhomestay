@@ -30,13 +30,13 @@ export default function RoomsPage() {
     }
   ];
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen mx-4 md:mx-8 lg:mx-16 xl:mx-32">
       {/* Header Section */}
       <section className="relative bg-white py-35">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif mb-4 text-gray-800">Our House</h1>
           <p className="text-gray-500">
-            <a href="/home" className="hover:text-gray-800 transition-colors">Home</a>
+            <a href="/" className="hover:text-gray-800 transition-colors">Home</a>
             <span className="mx-3">›</span>
             <span className="text-gray-800">house</span>
           </p>
@@ -91,7 +91,7 @@ export default function RoomsPage() {
 
                   {/* More Details Button */}
                   <button 
-                    onClick={() => window.location.href = room.id === 1 ? '/rooms/studio' : '/rooms/residential'}
+                    onClick={() => window.location.href = room.id === 1 ? '/rooms/studio-1-bedroom' : '/rooms/residential-house-2-bedroom'}
                     className="w-full border border-gray-800 text-gray-800 py-2.5 hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase tracking-wider text-xs font-semibold cursor-pointer"
                   >
                     More Details

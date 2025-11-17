@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-4 md:mx-8 lg:mx-16 xl:mx-32 px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Column 1 - About */}
           <div>
@@ -76,7 +76,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-slate-800 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Footer Links */}
