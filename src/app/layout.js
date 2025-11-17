@@ -94,9 +94,9 @@ export const metadata = {
   },
   manifest: '/manifest.json', // Jika ada PWA manifest
   icons: {
-    icon: '/logo/inezhomestaylogo.ico',
-    shortcut: '/logo/inezhomestaylogo.ico',
-    apple: '/logo/inezhomestaylogo.ico',
+    icon: '/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+    shortcut: '/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+    apple: '/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
   },
   other: {
     'theme-color': '#ffffff',

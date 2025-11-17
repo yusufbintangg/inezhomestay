@@ -29,25 +29,25 @@
   ],
   "icons": [
     {
-      "src": "/logo/Logo INEZ Homestay - ARIEF DARU.png",
+      "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
       "sizes": "16x16",
-      "type": "image/x-icon",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/logo/Logo INEZ Homestay - ARIEF DARU.png",
+      "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/logo/Logo INEZ Homestay - ARIEF DARU.png",
+      "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/logo/Logo INEZ Homestay - ARIEF DARU.png",
+      "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
@@ -61,7 +61,7 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/logo/inezhomestaylogo.ico",
+          "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
           "sizes": "96x96"
         }
       ]
@@ -73,7 +73,7 @@
       "url": "/rooms",
       "icons": [
         {
-          "src": "/logo/inezhomestaylogo.ico",
+          "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
           "sizes": "96x96"
         }
       ]
@@ -85,7 +85,7 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/logo/inezhomestaylogo.ico",
+          "src": "/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png",
           "sizes": "96x96"
         }
       ]
