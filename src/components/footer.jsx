@@ -48,7 +48,7 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400">
               <p>08112871237</p>
               <p>arief_daru@yahoo.com</p>
-              <p>Jl. Veteran No.32, Pandeyan,<br />Umbulharjo, Yogyakarta</p>
+              <p>Jl. Gerilya Gg. Tri Warga I, Brontokusuman, Kec. Mergangsan,<br />Kota Yogyakarta, Daerah Istimewa Yogyakarta 55153</p>
             </div>
           </div>
 

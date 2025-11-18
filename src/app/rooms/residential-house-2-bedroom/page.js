@@ -32,12 +32,14 @@ export default function RoomDetailPage2() {
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg'
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-18 at 11.13.33 AM.jpeg'
+
   ];
 
   const roomData = {
     name: 'Residential House with 2 Bedrooms',
-    price: '1.100.000',
+    price: '800.000',
     image: images[0], // Use first image as default
     size: '4x6',
     capacity: 'Max person 6',
@@ -88,7 +90,7 @@ export default function RoomDetailPage2() {
     e.preventDefault();
     const message = `Hello, I would like to book the ${roomData.name} Name : ${name}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}\nRooms: ${rooms}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/6281128712370?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/628112871237?text=${encodedMessage}`;
     window.location.href = whatsappUrl;
   };
 

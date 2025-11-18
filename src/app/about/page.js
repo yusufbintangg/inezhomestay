@@ -12,16 +12,37 @@ export default function AboutUsPage() {
     'Close to tourist attractions',
     'Peaceful & comfortable atmosphere'
   ];
-
-  const gallery = [
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM.jpeg',
+  const residentialGallery = [
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.07 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM (1).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
     '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.09 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.03 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.05 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-18 at 11.13.33 AM.jpeg',
+  ];
+
+  const studioGallery = [
+    '/rooms/studio1Bedroom/740618415.jpg',
     '/rooms/studio1Bedroom/740618453.jpg',
     '/rooms/studio1Bedroom/740618457.jpg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM (2).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM (1).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM.jpeg',
   ];
 
   return (
@@ -67,74 +88,42 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Studio Gallery Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Our Gallery</p>
-          <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-12">Discover Our Work
+          <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Studio Gallery</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-12">Studio 1 Bedroom
           </h2>
-          <div className="grid grid-cols-12 gap-4">
-            {/* Large image left */}
-            <div className="col-span-12 md:col-span-6 row-span-2">
-              <img 
-                src={gallery[0]} 
-                alt="Gallery 1"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            {/* Small images top right */}
-            <div className="col-span-6 md:col-span-3">
-              <img 
-                src={gallery[1]} 
-                alt="Gallery 2"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            <div className="col-span-6 md:col-span-3">
-              <img 
-                src={gallery[2]} 
-                alt="Gallery 3"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            {/* Large image bottom right */}
-            <div className="col-span-12 md:col-span-6">
-              <img 
-                src={gallery[3]} 
-                alt="Gallery 4"
-                className="w-full h-96 object-cover rounded-lg"
-              />
-            </div>
-            {/* Large image bottom right */}
-            <div className="col-span-12 md:col-span-6">
-              <img 
-                src={gallery[4]} 
-                alt="Gallery 5"
-                className="w-full h-96 object-cover rounded-lg"
-              />
-            </div>
-            <div className="col-span-12 md:col-span-6 row-span-2">
-              <img 
-                src={gallery[5]} 
-                alt="Gallery 6"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div> {/* Small images bottom right */}
-            <div className="col-span-6 md:col-span-3">
-              <img 
-                src={gallery[6]} 
-                alt="Gallery 7"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            <div className="col-span-6 md:col-span-3">
-              <img 
-                src={gallery[7]} 
-                alt="Gallery 8"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
+            {studioGallery.map((image, index) => (
+              <div key={index} className="aspect-block overflow-hidden rounded-lg">
+                <img
+                  src={image}
+                  alt={`Studio Gallery ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
           </div>
+      {/* Residential Gallery Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Residential Gallery</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-12">Residential House 2 Bedrooms
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
+            {residentialGallery.map((image, index) => (
+              <div key={index} className="aspect-block overflow-hidden rounded-lg">
+                <img
+                  src={image}
+                  alt={`Residential Gallery ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
         </div>
       </section>
     </div>

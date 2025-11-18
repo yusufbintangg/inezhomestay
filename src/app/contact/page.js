@@ -1,18 +1,109 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [checkIn, setCheckIn] = useState('');
+  const [checkOut, setCheckOut] = useState('');
+  const [roomType, setRoomType] = useState('');
+  const [availabilityStatus, setAvailabilityStatus] = useState('');
+  const [isAvailable, setIsAvailable] = useState(null);
+
+  // Mock booked dates (in a real app, this would come from a backend)
+  const [bookedDates, setBookedDates] = useState({
+    'studio-1-bedroom': [
+      { checkIn: '2025-12-25', checkOut: '2025-12-27' },
+      { checkIn: '2025-12-30', checkOut: '2026-01-02' }
+    ],
+    'residential-house-2-bedroom': [
+      { checkIn: '2025-12-20', checkOut: '2025-12-23' },
+      { checkIn: '2026-01-05', checkOut: '2026-01-08' }
+    ]
+  });
+
+  const checkAvailability = () => {
+    if (!checkIn || !checkOut || !roomType) {
+      setAvailabilityStatus('Please select check-in date, check-out date, and room type.');
+      setIsAvailable(null);
+      return;
+    }
+
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (checkInDate < today) {
+      setAvailabilityStatus('Check-in date cannot be in the past.');
+      setIsAvailable(false);
+      return;
+    }
+
+    if (checkOutDate <= checkInDate) {
+      setAvailabilityStatus('Check-out date must be after check-in date.');
+      setIsAvailable(false);
+      return;
+    }
+
+    const roomBookings = bookedDates[roomType] || [];
+    const isDateAvailable = !roomBookings.some(booking => {
+      const bookingCheckIn = new Date(booking.checkIn);
+      const bookingCheckOut = new Date(booking.checkOut);
+      return (checkInDate < bookingCheckOut && checkOutDate > bookingCheckIn);
+    });
+
+  };
+
+  useEffect(() => {
+    if (checkIn && checkOut && roomType) {
+      checkAvailability();
+    }
+  }, [checkIn, checkOut, roomType]);
 
   const handleSubmit = () => {
-    console.log({ name, email, message });
-    alert('Message sent! We will contact you soon.');
+    if (!name || !email || !message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    if (checkIn && checkOut && roomType && !isAvailable) {
+      alert('Please select available dates for booking.');
+      return;
+    }
+
+    // Prepare WhatsApp message
+    let whatsappMessage = `Hello INEZ Homestay!\n\n`;
+    whatsappMessage += `Name: ${name}\n`;
+    whatsappMessage += `Email: ${email}\n`;
+    whatsappMessage += `Message: ${message}\n`;
+
+    if (checkIn && checkOut && roomType) {
+      whatsappMessage += `\nBooking Details:\n`;
+      whatsappMessage += `Check-in: ${checkIn}\n`;
+      whatsappMessage += `Check-out: ${checkOut}\n`;
+      whatsappMessage += `Room Type: ${roomType === 'studio-1-bedroom' ? 'Studio 1 Bedroom' : 'Residential House 2 Bedrooms'}\n`;
+      whatsappMessage += `Please check if the room is still available for these dates.\n`;
+    }
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/628112871237?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form
     setName('');
     setEmail('');
     setMessage('');
+    setCheckIn('');
+    setCheckOut('');
+    setRoomType('');
+    setAvailabilityStatus('');
+    setIsAvailable(null);
   };
 
   return (
@@ -32,7 +123,7 @@ export default function ContactPage() {
               <div className="space-y-4 mb-8">
                 <div>
                   <span className="text-gray-800 font-medium">Address:</span>
-                  <span className="ml-4 text-gray-600">Jl. Veteran No.32, Pandeyan, Umbulharjo, Yogyakarta</span>
+                  <span className="ml-4 text-gray-600">Jl. Gerilya Gg. Tri Warga I, Brontokusuman, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55153</span>
                 </div>
                 <div>
                   <span className="text-gray-800 font-medium">Phone:</span>
@@ -61,7 +152,7 @@ export default function ContactPage() {
                 <p className="text-gray-700">
                   <span className="font-medium">BRI</span><br />
                   0340 0100 1472 561<br />
-                  <span className="font-medium">a/n ARIF DARU WIBAWANTO</span>
+                  <span className="font-medium">a/n ARIEF DARU WIBAWANTO</span>
                 </p>
               </div>
 
@@ -78,14 +169,14 @@ export default function ContactPage() {
             <div>
               <div className="space-y-4 text-gray-700">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <input 
+                  <input
                     type="text"
                     placeholder="Your Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                   />
-                  <input 
+                  <input
                     type="email"
                     placeholder="Your Email"
                     value={email}
@@ -93,16 +184,56 @@ export default function ContactPage() {
                     className="border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                   />
                 </div>
-                
-                <textarea 
+
+                {/* Booking Fields */}
+                <div className="grid md:grid-cols-3 gap-4">
+                  <input
+                    type="date"
+                    placeholder="Check-in Date"
+                    value={checkIn}
+                    onChange={(e) => setCheckIn(e.target.value)}
+                    className="border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
+                  />
+                  <input
+                    type="date"
+                    placeholder="Check-out Date"
+                    value={checkOut}
+                    onChange={(e) => setCheckOut(e.target.value)}
+                    className="border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
+                  />
+                  <select
+                    value={roomType}
+                    onChange={(e) => setRoomType(e.target.value)}
+                    className="border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
+                  >
+                    <option value="">Select Room Type</option>
+                    <option value="studio-1-bedroom">Studio 1 Bedroom</option>
+                    <option value="residential-house-2-bedroom">Residential House 2 Bedrooms</option>
+                  </select>
+                </div>
+
+                {/* Availability Status */}
+                {availabilityStatus && (
+                  <div className={`p-3 rounded-md text-sm ${
+                    isAvailable === true
+                      ? 'bg-green-50 text-green-700 border border-green-200'
+                      : isAvailable === false
+                      ? 'bg-red-50 text-red-700 border border-red-200'
+                      : 'bg-yellow-50 text-yellow-700 border border-yellow-200'
+                  }`}>
+                    {availabilityStatus}
+                  </div>
+                )}
+
+                <textarea
                   placeholder="Your Message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  rows="8"
+                  rows="6"
                   className="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-amber-500"
                 ></textarea>
 
-                <button 
+                <button
                   onClick={handleSubmit}
                   className="bg-amber-500 text-white px-8 py-3 hover:bg-amber-600 transition-colors uppercase text-sm font-semibold tracking-wider"
                 >
@@ -143,8 +274,8 @@ export default function ContactPage() {
       </section>
 
       {/* WhatsApp Floating Button */}
-      <a 
-        href="https://wa.me/6281128712370"
+      <a
+        href="https://wa.me/628112871237"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50 group"

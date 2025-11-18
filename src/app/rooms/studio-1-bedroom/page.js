@@ -27,10 +27,10 @@ export default function RoomDetailPage() {
 
   const roomData = {
     name: 'Studio House with 1 Bedrooms',
-    price: '800.000',
+    price: '400.000',
     image: images[0], // Use first image as default
     size: '4x6',
-    capacity: 'Max person 2',
+    capacity: 'Max person 3',
     bed: 'Queen Bed',
     totalSize: '40 m²',
     rating: 5,
@@ -43,7 +43,7 @@ export default function RoomDetailPage() {
       'Terrace',
       'Free Wi-Fi'
     ],
-    bedroom: '1 large double',
+    bedroom: 'queen size bed',
     description: 'Featuring a private entrance, this air-conditioned holiday home comprises 1 bedroom and 1 bathroom with a shower and a bidet. Boasting a terrace, this holiday home also provides a seating area, a wardrobe and a flat-screen TV with streaming services. The unit offers 1 bed.'
   };
 
@@ -54,13 +54,6 @@ export default function RoomDetailPage() {
       rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=12',
       comment: 'Nice place to stay for days. Extremely friendly owner, correct description. Many restaurants, travel agents, ATMs and a supermarket are just in a walking distance.Nearly complete kitchen equipment provided including fridge, also free coffee and tea. Nice beds and bathrooms. Best place on our trip.'
-    },
-    {
-      name: 'Anna',
-      date: '20 Februari 2024',
-      rating: 4.5,
-      avatar: 'https://i.pravatar.cc/150?img=43',
-      comment: 'A very cozy and beautiful house, downstairs there is a spacious dining room and kitchen, on the 2nd floor there are 2 cozy bedrooms with air conditioning and shower. The kitchen has all the necessary utensils, appliances and a free cooler with clean water on both floors. The owner is very kind, helped us in all matters, quickly resolved all issues around the house and promptly advised us on sights. The house is perfect for both a family and a group of friends. Very convenient location in the city center, there are many shops and a variety of cafes with delicious food nearby. We are very grateful to the owner of the house for his care and cozy home.'
     }
   ];
 
@@ -76,7 +69,7 @@ export default function RoomDetailPage() {
     e.preventDefault();
     const message = `Hello, I would like to book the ${roomData.name} Name : ${name}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}\nRooms: ${rooms}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/6281128712370?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/628112871237?text=${encodedMessage}`;
     window.location.href = whatsappUrl;
   };
 

@@ -1,13 +1,90 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Home, Bed, ShowerHead, Wifi, Utensils, MapPin} from "lucide-react";
+import { Snowflake, BedDouble, Laptop, Wind, Tv, Wifi, Coffee, CloudLightning, Fan, WashingMachine, UtilityPole, } from "lucide-react";
 
 export default function Homepage() {
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [adults, setAdults] = useState('2');
   const [rooms, setRooms] = useState('1');
+  const [roomType, setRoomType] = useState('');
+  const [availabilityStatus, setAvailabilityStatus] = useState('');
+  const [isAvailable, setIsAvailable] = useState(null);
+
+  // Mock booked dates (in a real app, this would come from a backend)
+  const [bookedDates, setBookedDates] = useState({
+    'studio-1-bedroom': [
+      { checkIn: '', checkOut: '' },
+      { checkIn: '', checkOut: '' }
+    ],
+    'residential-house-2-bedroom': [
+      { checkIn: '', checkOut: '' },
+      { checkIn: '', checkOut: '' }
+    ]
+  });
+
+  const checkAvailability = () => {
+    if (!checkIn || !checkOut || !roomType) {
+      setAvailabilityStatus('Please select check-in date, check-out date, and room type.');
+      setIsAvailable(null);
+      return;
+    }
+
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (checkInDate < today) {
+      setAvailabilityStatus('Check-in date cannot be in the past.');
+      setIsAvailable(false);
+      return;
+    }
+
+    if (checkOutDate <= checkInDate) {
+      setAvailabilityStatus('Check-out date must be after check-in date.');
+      setIsAvailable(false);
+      return;
+    }
+
+    const roomBookings = bookedDates[roomType] || [];
+    const isDateAvailable = !roomBookings.some(booking => {
+      const bookingCheckIn = new Date(booking.checkIn);
+      const bookingCheckOut = new Date(booking.checkOut);
+      return (checkInDate < bookingCheckOut && checkOutDate > bookingCheckIn);
+    });
+  };
+
+  useEffect(() => {
+    if (checkIn && checkOut && roomType) {
+      checkAvailability();
+    }
+  }, [checkIn, checkOut, roomType]);
+
+  const handleCheckAvailability = () => {
+    if (!checkIn || !checkOut || !roomType) {
+      alert('Please fill in check-in date, check-out date, and select room type.');
+      return;
+    }
+
+    // Prepare WhatsApp message
+    let whatsappMessage = `Hello INEZ Homestay!\n\n`;
+    whatsappMessage += `Booking Inquiry:\n`;
+    whatsappMessage += `Check-in: ${checkIn}\n`;
+    whatsappMessage += `Check-out: ${checkOut}\n`;
+    whatsappMessage += `Adults: ${adults}\n`;
+    whatsappMessage += `Rooms: ${rooms}\n`;
+    whatsappMessage += `Room Type: ${roomType === 'studio-1-bedroom' ? 'Studio 1 Bedroom' : 'Residential House 2 Bedrooms'}\n`;
+    whatsappMessage += `Please check if the room is still available for these dates.\n`;
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/628112871237?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+  };
 
   const images = [
     '/herohome/ZNH02290 - ARIEF DARU.jpg',
@@ -27,18 +104,31 @@ export default function Homepage() {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const services = [
-      { icon: <Home size={48} />, title: 'Entire Place', desc: 'A private unit without sharing any space with other guests.' },
-      { icon: <Bed size={48} />, title: 'Bedrooms', desc: '2 bedrooms equipped with comfortable beds.' },
-      { icon: <ShowerHead size={48} />, title: 'Bathrooms', desc: '3 clean and fully functional bathrooms.' },
-      { icon: <Wifi size={48} />, title: 'Free WiFi', desc: 'High-speed internet available throughout the property.' },
-      { icon: <Utensils size={48} />, title: 'Kitchen Amenities', desc: 'Includes a fridge and basic cooking essentials.' },
-      { icon: <MapPin size={48} />, title: 'Prime Location', desc: 'Located in the city center, close to various public facilities.' }
-  ];
+  const serviceStudio = [
+  { icon: <Snowflake size={48} />, title: 'Air Conditioning', desc: 'A system that cools and controls humidity indoors.' },
+  { icon: <BedDouble size={48} />, title: 'Bed Linens', desc: 'Clean and comfortable bed linens provided.' },
+  { icon: <Laptop size={48} />, title: 'Dedicated Workspace', desc: 'A desk or table for focused work.' },
+  { icon: <Wind size={48} />, title: 'Hair Dryer', desc: 'A device for drying hair quickly.' },
+  { icon: <Tv size={48} />, title: 'TV', desc: 'A device for watching television.' },
+  { icon: <Wifi size={48} />, title: 'Wifi', desc: 'Wireless internet available throughout the property.' },
+  ]
+   const serviceResidential = [
+  { icon: <Snowflake size={48} />, title: 'Air Conditioning', desc: 'A system that cools and controls humidity indoors.' },
+  { icon: <BedDouble size={48} />, title: 'Bed Linens', desc: 'Clean and comfortable bed linens provided.' },
+  { icon: <Laptop size={48} />, title: 'Dedicated Workspace', desc: 'A desk or table for focused work.' },
+  { icon: <Wind size={48} />, title: 'Hair Dryer', desc: 'A device for drying hair quickly.' },
+  { icon: <Tv size={48} />, title: 'TV', desc: 'A device for watching television.' },
+  { icon: <Wifi size={48} />, title: 'Wifi', desc: 'Wireless internet available throughout the property.' },
+  { icon: <Coffee size={48} />, title: 'Kitchen', desc: 'A space equipped for cooking and food preparation.' },
+  { icon: <CloudLightning size={48} />, title: 'Heating', desc: 'A system that provides warmth indoors.' },
+  { icon: <Fan size={48} />, title: 'Ceiling Fan', desc: 'A fan mounted on the ceiling for air circulation.' },
+  { icon: <WashingMachine size={48} />, title: 'Washing Machine', desc: 'A machine for washing clothes.' },
+  { icon: <UtilityPole size={48} />, title: 'Hangers', desc: 'A separate entrance for privacy and convenience.' },
+];
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center">
+      <section className="relative h-180 bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         {images.map((image, index) => (
           <img
@@ -53,7 +143,7 @@ export default function Homepage() {
         <div className="relative text-black mx-4 md:mx-8 lg:mx-16 xl:mx-32 h-full flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-6xl md:text-7xl font-serif mb-6">
-              INEZ Homestay <br/>Feels Like Home
+              INEZ Homestay <br/>Cozy Homey Friendly
             </h1>
             <p className="text-bold mb-8 text-gray-200 leading-relaxed">
             offers a cozy tropical ambiance with natural tones and warm lighting — creating a relaxing home-away-from-home atmosphere perfect for travelers seeking peace and comfort
@@ -92,6 +182,19 @@ export default function Homepage() {
                 </div>
               </div>
 
+              <div>
+                <label className="block text-sm text-gray-600 mb-2">Room Type</label>
+                <select
+                  value={roomType}
+                  onChange={(e) => setRoomType(e.target.value)}
+                  className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500"
+                >
+                  <option value="">Select Room Type</option>
+                  <option value="studio-1-bedroom">Studio 1 Bedroom</option>
+                  <option value="residential-house-2-bedroom">Residential House 2 Bedrooms</option>
+                </select>
+              </div>
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm text-gray-600 mb-2">Adults</label>
@@ -104,6 +207,8 @@ export default function Homepage() {
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
                   </select>
                 </div>
                 <div>
@@ -115,13 +220,27 @@ export default function Homepage() {
                   >
                     <option>1</option>
                     <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                   </select>
                 </div>
               </div>
 
-              <button className="w-full bg-amber-500 text-white py-3 rounded hover:bg-amber-600 transition-colors duration-300 font-medium">
+              {/* Availability Status */}
+              {availabilityStatus && (
+                <div className={`p-3 rounded-md text-sm ${
+                  isAvailable === true
+                    ? 'bg-green-50 text-green-700 border border-green-200'
+                    : isAvailable === false
+                    ? 'bg-red-50 text-red-700 border border-red-200'
+                    : 'bg-yellow-50 text-yellow-700 border border-yellow-200'
+                }`}>
+                  {availabilityStatus}
+                </div>
+              )}
+
+              <button
+                onClick={handleCheckAvailability}
+                className="w-full bg-amber-500 text-white py-3 rounded hover:bg-amber-600 transition-colors duration-300 font-medium"
+              >
                 CHECK AVAILABILITY
               </button>
             </div>
@@ -134,7 +253,7 @@ export default function Homepage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gray-800">
-              Westlake City <br/>Homestay
+              Where Comfort and  <br/>Warm Hospitality meety
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
               Experience modern comfort in the heart of the city. Our homestay offers clean, spacious rooms and a warm atmosphere—perfect for unwinding after a full day of exploring.            </p>
@@ -145,26 +264,41 @@ export default function Homepage() {
             </button>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM (1).jpeg"
+            <img src="/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg"
                  alt="Temple"
                  className="rounded-lg shadow-lg w-full h-84 object-cover" />
-            <img src="/rooms/studio1Bedroom/740618453.jpg"
+            <img src="/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg"
                  alt="Interior"
                  className="rounded-lg shadow-lg w-full h-94 object-cover mt-8" />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Studio */}
       <section className="py-20 px-4 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif mb-16 text-gray-800">Discover Our Facilities</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-16 text-gray-800">Discover Our Facilities Studio House</h2>
           <div className="grid md:grid-cols-3 gap-12">
-            {services.map((service, index) => (
+            {serviceStudio.map((serviceStudio, index) => (
               <div key={index} className="text-center">
-                <div className="text-amber-500 mb-4 flex justify-center">{service.icon}</div>
-                <h3 className="text-xl font-serif mb-3 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
+                <div className="text-amber-500 mb-4 flex justify-center">{serviceStudio.icon}</div>
+                <h3 className="text-xl font-serif mb-3 text-gray-800">{serviceStudio.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{serviceStudio.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Services residetnial */}
+      <section className="py-20 px-4 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif mb-16 text-gray-800">Discover Our Facilities Residential House</h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            {serviceResidential.map((serviceResidential, index) => (
+              <div key={index} className="text-center">
+                <div className="text-amber-500 mb-4 flex justify-center">{serviceResidential.icon}</div>
+                <h3 className="text-xl font-serif mb-3 text-gray-800">{serviceResidential.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{serviceResidential.desc}</p>
               </div>
             ))}
           </div>
