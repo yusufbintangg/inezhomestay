@@ -109,7 +109,7 @@ export default function Homepage() {
   { icon: <BedDouble size={48} />, title: 'Bed Linens', desc: 'Clean and comfortable bed linens provided.' },
   { icon: <Laptop size={48} />, title: 'Dedicated Workspace', desc: 'A desk or table for focused work.' },
   { icon: <Wind size={48} />, title: 'Hair Dryer', desc: 'A device for drying hair quickly.' },
-  { icon: <Tv size={48} />, title: 'TV', desc: 'A device for watching television.' },
+  { icon: <Tv size={48} />, title: 'Smart TV + Netflix', desc: 'A device for watching television.' },
   { icon: <Wifi size={48} />, title: 'Wifi', desc: 'Wireless internet available throughout the property.' },
   ]
    const serviceResidential = [
@@ -117,11 +117,10 @@ export default function Homepage() {
   { icon: <BedDouble size={48} />, title: 'Bed Linens', desc: 'Clean and comfortable bed linens provided.' },
   { icon: <Laptop size={48} />, title: 'Dedicated Workspace', desc: 'A desk or table for focused work.' },
   { icon: <Wind size={48} />, title: 'Hair Dryer', desc: 'A device for drying hair quickly.' },
-  { icon: <Tv size={48} />, title: 'TV', desc: 'A device for watching television.' },
+  { icon: <Tv size={48} />, title: 'Smart TV + Netflix ', desc: 'A device for watching television.' },
   { icon: <Wifi size={48} />, title: 'Wifi', desc: 'Wireless internet available throughout the property.' },
   { icon: <Coffee size={48} />, title: 'Kitchen', desc: 'A space equipped for cooking and food preparation.' },
   { icon: <Fan size={48} />, title: 'Ceiling Fan', desc: 'A fan mounted on the ceiling for air circulation.' },
-  { icon: <UtilityPole size={48} />, title: 'Hangers', desc: 'A separate entrance for privacy and convenience.' },
 ];
   return (
     <div className="bg-white">
