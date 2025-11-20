@@ -13,36 +13,27 @@ export default function AboutUsPage() {
     'Peaceful & comfortable atmosphere'
   ];
   const residentialGallery = [
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.07 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.09 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.03 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.05 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-18 at 11.13.33 AM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.28 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (2).jpeg'
   ];
 
   const studioGallery = [
-    '/rooms/studio1Bedroom/740618415.jpg',
-    '/rooms/studio1Bedroom/740618453.jpg',
-    '/rooms/studio1Bedroom/740618457.jpg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM (2).jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM (1).jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM (1).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM (1).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM.jpeg',
   ];
 
   return (

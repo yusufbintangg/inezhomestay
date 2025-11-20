@@ -262,10 +262,10 @@ export default function Homepage() {
             </button>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg"
+            <img src="/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg"
                  alt="Temple"
                  className="rounded-lg shadow-lg w-full h-84 object-cover" />
-            <img src="/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg"
+            <img src="/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg"
                  alt="Interior"
                  className="rounded-lg shadow-lg w-full h-94 object-cover mt-8" />
           </div>

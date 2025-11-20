@@ -13,7 +13,7 @@ export default function RoomsPage() {
       capacity: 'Max person 6',
       bed: 'Queen Beds',
       roomSize: '4x6',
-      image: 'rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+      image: 'rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg',
       facilities: '1 holiday home, Private kitchen, Balcony, AC, Flat screen TV...'
     },
     {
@@ -25,7 +25,7 @@ export default function RoomsPage() {
       capacity: 'Max person 3',
       bed: 'Queen Beds',
       roomSize: '4x6',
-      image: 'rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+      image: 'rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg',
       facilities: 'Entire holiday home, AC, Private bathroom, Flat screen TV...'
     }
   ];
