@@ -5,18 +5,6 @@ import React from 'react';
 export default function RoomsPage() {
   const rooms = [
     {
-      id: 1,
-      name: 'Studio House',
-      subtitle: 'with 1 Bedrooms',
-      price: '400.000',
-      size: '40 m²',
-      capacity: 'Max person 3',
-      bed: 'Queen Beds',
-      roomSize: '4x6',
-      image: 'rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
-      facilities: 'Entire holiday home, AC, Private bathroom, Flat screen TV...'
-    },
-    {
       id: 2,
       name: 'Residential House',
       subtitle: 'with 2 Bedrooms',
@@ -27,6 +15,18 @@ export default function RoomsPage() {
       roomSize: '4x6',
       image: 'rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
       facilities: '1 holiday home, Private kitchen, Balcony, AC, Flat screen TV...'
+    },
+    {
+      id: 1,
+      name: 'Studio House',
+      subtitle: 'with 1 Bedrooms',
+      price: '400.000',
+      size: '40 m²',
+      capacity: 'Max person 3',
+      bed: 'Queen Beds',
+      roomSize: '4x6',
+      image: 'rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
+      facilities: 'Entire holiday home, AC, Private bathroom, Flat screen TV...'
     }
   ];
   return (
@@ -66,7 +66,7 @@ export default function RoomsPage() {
                   </h2>
                   
                   <div className="text-3xl font-bold text-amber-500 mb-6">
-                    {room.price}<span className="text-sm font-normal text-gray-600">/Pernight</span>
+                    {room.price}<span className="text-sm font-normal text-gray-600">/Pernight. Prices may vary depending on seasons</span>
                   </div>
 
                   {/* Room Info */}

@@ -15,14 +15,11 @@ export default function RoomDetailPage() {
   const [review, setReview] = useState('');
 
   const images = [
-    '/rooms/studio1Bedroom/740618415.jpg',
-    '/rooms/studio1Bedroom/740618453.jpg',
-    '/rooms/studio1Bedroom/740618457.jpg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM (2).jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.08 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM (1).jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-13 at 8.34.09 PM.jpeg'
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM (1).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM (1).jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM.jpeg'
   ];
 
   const roomData = {
@@ -49,11 +46,25 @@ export default function RoomDetailPage() {
 
   const reviews = [
     {
-      name: 'Stefan',
-      date: '5 Juli 2024',
+      name: ' Charlotte Freeman, UK',
+      date: '24-27 Juli 2025',
       rating: 5,
-      avatar: 'https://i.pravatar.cc/150?img=12',
-      comment: 'Nice place to stay for days. Extremely friendly owner, correct description. Many restaurants, travel agents, ATMs and a supermarket are just in a walking distance.Nearly complete kitchen equipment provided including fridge, also free coffee and tea. Nice beds and bathrooms. Best place on our trip.'
+      avatar: 'https://i.pravatar.cc/150?img=15',
+      comment: 'The studio was fabulous. Everything seemed brand new and was spotless, with a really comfy bed. Much more luxurious than my London flat! It was in a side alley so very quiet and safe but only a few minutes walk from some buzzing streets lined with bars and restaurants. Plenty of good nightlife on hand. Arief was an amazing host, always quick to reply and full of helpful advice. She couldnt have been more kind. Must be the best value for money in Jogjakarta.'
+    },
+    {
+      name: 'Valentina Milo, Italy',
+      date: '29 Juli- 1 Agustus 2025',
+      rating: 5,
+      avatar: 'https://i.pravatar.cc/150?img=43',
+      comment: 'The apartment is really nice and clean, around there are several streets with places for both tourists and to mix with the locals. The host is a person available to help you and with whom it is easy to communicate. Yogyakarta is a magical place, we recommend you go there and choose this place!'
+    },
+    {
+      name: 'Mathilde Fauchet, France',
+      date: '24-27 Juli 2025',
+      rating: 5,
+      avatar: 'https://i.pravatar.cc/150?img=16',
+      comment: 'We had a pleasant stay at Inez Homestay! Host was very responsive to our requests. The place was spotless and as described! Thank you!'
     }
   ];
 

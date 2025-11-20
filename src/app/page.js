@@ -120,9 +120,7 @@ export default function Homepage() {
   { icon: <Tv size={48} />, title: 'TV', desc: 'A device for watching television.' },
   { icon: <Wifi size={48} />, title: 'Wifi', desc: 'Wireless internet available throughout the property.' },
   { icon: <Coffee size={48} />, title: 'Kitchen', desc: 'A space equipped for cooking and food preparation.' },
-  { icon: <CloudLightning size={48} />, title: 'Heating', desc: 'A system that provides warmth indoors.' },
   { icon: <Fan size={48} />, title: 'Ceiling Fan', desc: 'A fan mounted on the ceiling for air circulation.' },
-  { icon: <WashingMachine size={48} />, title: 'Washing Machine', desc: 'A machine for washing clothes.' },
   { icon: <UtilityPole size={48} />, title: 'Hangers', desc: 'A separate entrance for privacy and convenience.' },
 ];
   return (
@@ -253,12 +251,12 @@ export default function Homepage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gray-800">
-              Where Comfort and  <br/>Warm Hospitality meety
+              Where Comfort and  <br/>Warm Hospitality meet
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Experience modern comfort in the heart of the city. Our homestay offers clean, spacious rooms and a warm atmosphere—perfect for unwinding after a full day of exploring.            </p>
+              Experience modern comfort in the heart of the city. Our homestay offers clean, spacious rooms and a warm atmosphere—perfect for unwinding after a full day of exploring.</p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Located just minutes away from restaurants, shopping centers, and major attractions, this is the ideal place for business travelers, couples, and families who value convenience and stylish comfort.            </p>
+              Located in the Prawirotaman area, often referred to as the “Legian of Yogyakarta", just minutes away shopping centers, and major attractions, this is the ideal place for business travelers, couples, and families who value convenience and stylish comfort.            </p>
             <button className="border-2 border-gray-800 text-gray-800 px-8 py-3 hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase tracking-wider text-sm font-medium">
               Read More
             </button>

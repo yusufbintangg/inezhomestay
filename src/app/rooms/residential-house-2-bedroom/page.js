@@ -15,26 +15,19 @@ export default function RoomDetailPage2() {
   const [review, setReview] = useState('');
 
   const images = [
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.07 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.08 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.09 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.10 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.12 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.32.13 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.02 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.03 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.05 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.06 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-13 at 8.34.07 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-18 at 11.13.33 AM.jpeg'
-
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.28 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM.jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (2).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (1).jpeg',
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (2).jpeg'
   ];
 
   const roomData = {
@@ -63,21 +56,28 @@ export default function RoomDetailPage2() {
 
   const reviews = [
     {
-      name: 'Stefan',
-      date: '5 Juli 2024',
+      name: ' Amine Abdou, France',
+      date: '14-15 November 2025',
       rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=12',
-      comment: 'Nice place to stay for days. Extremely friendly owner, correct description. Many restaurants, travel agents, ATMs and a supermarket are just in a walking distance.Nearly complete kitchen equipment provided including fridge, also free coffee and tea. Nice beds and bathrooms. Best place on our trip.'
+      comment: 'Very good accomodation, clean, easy to access and wll located close to many restaurants, dynamic area if you want to go out. Arief is very responsive and gave us good recommendation for the different needs we had.  In line with photos.'
     },
     {
-      name: 'Anna',
-      date: '20 Februari 2024',
+      name: 'dr Miguel Santos, Portugal',
+      date: '6-11 November 2025',
       rating: 5,
-      avatar: 'https://i.pravatar.cc/150?img=43',
-      comment: 'A very cozy and beautiful house, downstairs there is a spacious dining room and kitchen, on the 2nd floor there are 2 cozy bedrooms with air conditioning and shower. The kitchen has all the necessary utensils, appliances and a free cooler with clean water on both floors. The owner is very kind, helped us in all matters, quickly resolved all issues around the house and promptly advised us on sights. The house is perfect for both a family and a group of friends. Very convenient location in the city center, there are many shops and a variety of cafes with delicious food nearby. We are very grateful to the owner of the house for his care and cozy home.'
+      avatar: 'https://i.pravatar.cc/150?img=13',
+      comment: 'Arief was a great host: helpful, friendly and accomodating. Recommended stay!'
+    },
+     {
+      name: 'dr Jill Cardamon, USA',
+      date: '1-3 September 2025',
+      rating: 5,
+      avatar: 'https://i.pravatar.cc/150?img=33',
+      comment: 'Had a great time at Inez Homestay! The internet worked great, and Arief was incredibly responsive. Would definitely stay there again.'
     }
   ];
-
+  
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
@@ -156,7 +156,7 @@ export default function RoomDetailPage2() {
                 <div>
                   <h2 className="text-3xl md:text-4xl font-serif text-gray-800 mb-2">{roomData.name}</h2>
                   <div className="text-3xl md:text-4xl font-bold text-amber-500">
-                    {roomData.price}<span className="text-sm font-normal text-gray-600">/Pernight</span>
+                    {roomData.price}<span className="text-sm font-normal text-gray-600">/Pernight. Prices may vary depending on season</span>
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
