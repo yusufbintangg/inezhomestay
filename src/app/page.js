@@ -146,7 +146,7 @@ export default function Homepage() {
             offers a cozy tropical ambiance with natural tones and warm lighting — creating a relaxing home-away-from-home atmosphere perfect for travelers seeking peace and comfort
             </p>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-gray-900 transition-all duration-300 uppercase tracking-wider text-sm font-medium">
-              Discover More
+             <a href="/rooms" >Discover More</a>
             </button>
           </div>
 
@@ -257,7 +257,7 @@ export default function Homepage() {
             <p className="text-gray-600 leading-relaxed mb-8">
               Located in the Prawirotaman area, often referred to as the “Legian of Yogyakarta", just minutes away shopping centers, and major attractions, this is the ideal place for business travelers, couples, and families who value convenience and stylish comfort.            </p>
             <button className="border-2 border-gray-800 text-gray-800 px-8 py-3 hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase tracking-wider text-sm font-medium">
-              Read More
+               <a href="/about" >Read More</a>
             </button>
           </div>
           <div className="grid grid-cols-2 gap-4">
