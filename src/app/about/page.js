@@ -78,24 +78,6 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-
-      {/* Studio Gallery Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Studio Gallery</p>
-          <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-12">Studio 1 Bedroom
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
-            {studioGallery.map((image, index) => (
-              <div key={index} className="aspect-block overflow-hidden rounded-lg">
-                <img
-                  src={image}
-                  alt={`Studio Gallery ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
       {/* Residential Gallery Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -115,6 +97,23 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      {/* Studio Gallery Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-amber-500 uppercase tracking-widest text-sm mb-4">Studio Gallery</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-12">Studio 1 Bedroom
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
+            {studioGallery.map((image, index) => (
+              <div key={index} className="aspect-block overflow-hidden rounded-lg">
+                <img
+                  src={image}
+                  alt={`Studio Gallery ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
