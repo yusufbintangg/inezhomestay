@@ -63,14 +63,14 @@ export default function RoomDetailPage2() {
       comment: 'Very good accomodation, clean, easy to access and wll located close to many restaurants, dynamic area if you want to go out. Arief is very responsive and gave us good recommendation for the different needs we had.  In line with photos.'
     },
     {
-      name: 'dr Miguel Santos, Portugal',
+      name: 'Miguel Santos, Portugal',
       date: '6-11 November 2025',
       rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=13',
       comment: 'Arief was a great host: helpful, friendly and accomodating. Recommended stay!'
     },
      {
-      name: 'dr Jill Cardamon, USA',
+      name: 'Jill Cardamon, USA',
       date: '1-3 September 2025',
       rating: 5,
       avatar: 'https://i.pravatar.cc/150?img=33',
