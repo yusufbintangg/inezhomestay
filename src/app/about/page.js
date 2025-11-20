@@ -13,27 +13,27 @@ export default function AboutUsPage() {
     'Peaceful & comfortable atmosphere'
   ];
   const residentialGallery = [
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.28 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM.jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (2).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (1).jpeg',
-    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (2).jpeg'
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.25 PM.jpeg', //kamar
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (1).jpeg', //kamar 
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM.jpeg', //kamar 
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (1).jpeg', //kamar
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (1).jpeg',//teras
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM (1).jpeg', //teras
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM (1).jpeg', //kamar mandi
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.30 PM.jpeg',//kamar mandi
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.27 PM (2).jpeg',//living room
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.31 PM (2).jpeg',//dining room
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.28 PM.jpeg',//dining room
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.32 PM (2).jpeg',//balkon
+    '/rooms/residentialhouse2bedrooms/WhatsApp Image 2025-11-08 at 2.07.29 PM.jpeg', //dapur
   ];
 
   const studioGallery = [
     '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg',
     '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM (1).jpeg',
     '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.53 PM.jpeg',
-    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM (1).jpeg',
     '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM.jpeg',
+    '/rooms/studio1Bedroom/WhatsApp Image 2025-11-08 at 2.07.54 PM (1).jpeg',
   ];
 
   return (
