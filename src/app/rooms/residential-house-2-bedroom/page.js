@@ -38,7 +38,7 @@ export default function RoomDetailPage2() {
     capacity: 'Max person 6',
     bed: 'Queen Bed',
     totalSize: '150 m²',
-    rating: 4.5,
+    rating: 5,
     facilities: [
       '1 holiday home',
       '150 m²',
