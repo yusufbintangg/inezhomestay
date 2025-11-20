@@ -32,7 +32,7 @@ export default function RoomDetailPage2() {
 
   const roomData = {
     name: 'Residential House with 2 Bedrooms',
-    price: '800.000',
+    price: '800.000 IDR',
     image: images[0], // Use first image as default
     size: '4x6',
     capacity: 'Max person 6',

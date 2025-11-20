@@ -24,7 +24,7 @@ export default function RoomDetailPage() {
 
   const roomData = {
     name: 'Studio House with 1 Bedrooms',
-    price: '400.000',
+    price: '400.000 IDR',
     image: images[0], // Use first image as default
     size: '4x6',
     capacity: 'Max person 3',
