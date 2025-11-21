@@ -73,16 +73,16 @@ export const metadata = {
     description: 'Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome.',
     images: [
       {
-        url: 'https://inezhomestay.com/OG/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
-        width: 1200,
-        height: 630,
-        alt: 'INEZ Homestay Logo',
-      },
-      {
         url: 'https://inezhomestay.com/OG/WhatsApp%20Image%202025-11-08%20at%202.07.52%20PM.jpeg',
         width: 1200,
         height: 630,
         alt: 'INEZ Homestay Hero Image',
+      },
+      {
+        url: 'https://inezhomestay.com/OG/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+        width: 1200,
+        height: 630,
+        alt: 'INEZ Homestay Logo',
       },
     ],
   },
@@ -92,7 +92,7 @@ export const metadata = {
     creator: '@inezhomestay',
     title: 'INEZ Homestay - Feels Like Home',
     description: 'Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome.',
-    images: ['/logo/Logo INEZ Homestay - ARIEF DARU.png'],
+    images: ['/OG/WhatsApp Image 2025-11-08 at 2.07.52 PM.jpeg'],
   },
   verification: {
     bing: 'your-bing-site-verification-code', // Ganti dengan Bing verification code
