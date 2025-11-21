@@ -26,7 +26,21 @@ export const metadata = {
     template: "%s | INEZ Homestay"
   },
   description: "Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome in the heart of Indonesia.",
-  keywords: ["homestay", "Indonesia", "accommodation", "studio room", "residential house", "vacation rental", "cultural experience", "local hospitality"],
+  keywords: ["homestay in Yogyakarta",
+             "Yogyakarta accommodation",
+             "vacation rental in Yogyakarta",
+             "family-friendly homestay",
+             "studio room Yogyakarta",
+             "two-bedroom house Yogyakarta",
+             "affordable homestay in Yogyakarta",
+             "homestay near Malioboro",
+             "private homestay with kitchen",
+             "long stay accommodation Yogyakarta",
+             "short-term rental Yogyakarta",
+             "best homestay for tourists in Indonesia",
+             "traditional Indonesian hospitality",
+             "holiday home in Yogyakarta"
+  ],
   authors: [{ name: "INEZ Homestay Team" }],
   creator: "INEZ Homestay",
   publisher: "INEZ Homestay",
@@ -59,13 +73,13 @@ export const metadata = {
     description: 'Experience authentic Indonesian hospitality at INEZ Homestay. Comfortable rooms, local culture, and warm welcome.',
     images: [
       {
-        url: 'https://inezhomestay.com/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+        url: 'https://inezhomestay.com/OG/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
         width: 1200,
         height: 630,
         alt: 'INEZ Homestay Logo',
       },
       {
-        url: 'https://inezhomestay.com/logo/Logo%20INEZ%20Homestay%20-%20ARIEF%20DARU.png',
+        url: 'https://inezhomestay.com/OG/WhatsApp%20Image%202025-11-08%20at%202.07.52%20PM.jpeg',
         width: 1200,
         height: 630,
         alt: 'INEZ Homestay Hero Image',
